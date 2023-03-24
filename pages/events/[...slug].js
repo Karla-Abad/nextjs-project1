@@ -17,7 +17,7 @@ function FilteredEventsPage(props) {
     "https://nextjs-project-2-8f4c9-default-rtdb.firebaseio.com/events.json",
     (url) => fetch(url).then((res) => res.json())
   );
-  console.log(data);
+  console.log(error);
 
   useEffect(() => {
     if (data) {
@@ -80,7 +80,7 @@ function FilteredEventsPage(props) {
         </ErrorAlert>
 
         <div className="center">
-          <Button link="events">Show All Events</Button>
+          <Button link="/events">Show All Events</Button>
         </div>
       </Fragment>
     );
